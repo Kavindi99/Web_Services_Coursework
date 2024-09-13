@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return '<h1>Web Services Coursework</h1>'
+    return '<h1>Web Services Coursework22</h1>'
 
 if __name__ == '__main__':
     #app.run(debug=True)
