@@ -5,11 +5,11 @@ phases:
     commands:
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 211125605795.dkr.ecr.ap-south-1.amazonaws.com
     commands:
-      - docker build -t webservicecourseworkrepo .
-      - docker tag webservicecourseworkrepo:latest 211125605795.dkr.ecr.ap-south-1.amazonaws.com/webservicecourseworkrepo:latest
+      - docker build -t ecr_aws_assigment .
+      - docker tag ecr_aws_assigment:latest 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:latest
   post_build:
     commands:
-      - docker push 211125605795.dkr.ecr.ap-south-1.amazonaws.com/webservicecourseworkrepo:latest
+      - docker push 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:latest
       - echo Writing image definitions file...
       - printf '[{"name":"mywebsite","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
 artifacts:
