@@ -15,7 +15,7 @@ phases:
       - docker pull 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:green || true
       - docker tag 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:green 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:blue || true
       - echo Tagging the Docker image as green...
-      - docker tag ecr1:latest 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:green
+      - docker tag ecr_aws_assigment:latest 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:green
       - docker tag ecr_aws_assigment:latest 211125605795.dkr.ecr.ap-south-1.amazonaws.com/ecr_aws_assigment:latest
 
   post_build:
